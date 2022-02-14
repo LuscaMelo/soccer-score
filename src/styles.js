@@ -56,6 +56,10 @@ export const TeamContainer = styled.div`
         h2 {
             font-size: 1.5em;
         }
+
+        span{
+            font-size: 5rem;
+        }
     }
 
 `
