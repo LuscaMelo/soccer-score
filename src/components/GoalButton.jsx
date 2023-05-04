@@ -1,6 +1,6 @@
-import React, { useState }from 'react'
+import React, { useState } from 'react'
 
-import { Button, GoalsNumber } from '../styles'
+import { Button, GoalsNumber, Hr } from '../styles'
 
 export default function GoalButton() {
 
@@ -13,7 +13,8 @@ export default function GoalButton() {
   return (
     <GoalsNumber>
       <span>{goals}</span>
-      <Button onClick={makeGoal}>Gol</Button>
+      <Hr />
+      <Button onClick={makeGoal}>GOL</Button>
     </GoalsNumber>
   )
 }

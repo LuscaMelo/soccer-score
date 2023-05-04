@@ -3,14 +3,17 @@ import styled from "styled-components";
 export const Container = styled.div`
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    flex-direction: column;
+    gap: 1.2rem;
     background: rgba(255, 255, 255, 0.05);
     backdrop-filter: blur(6px);
     border: 1px solid rgba(255, 255, 255, 0.07);
-    padding: 3em;
     border-radius: 30px;
     color: #fff;
     text-align: center;
+    margin: 2rem;
+    padding: 0 2rem;
+    padding-top: 15px;
 
     h3{
         font-size: 1.2em;
@@ -18,109 +21,93 @@ export const Container = styled.div`
         color: rgba(255, 255, 255, 0.7);
     }
 
-    @media(max-width: 1000px) {
-        display: flex;
-        flex-direction: column;
-        margin: 8% 2%;
-        padding: 3em 6em;
-    }
-
-    @media(max-width: 500px) {
-        padding: 3em 2em;
-    }
-
-    @media(max-width: 320px) {
-        padding: 2em 0;
+    @media screen and (min-width: 700px){
+        flex-direction: row;
+        gap: 2rem;
+        padding: 3rem;
     }
 `
 
 export const TeamContainer = styled.div`
-    padding: 1em 3em;
 
-    img{
-        width: 100px;
-        margin: 1em 0;
+    img {
+        width: 3.5rem;
+        margin: 1rem 0;
+
+        @media screen and (min-width: 700px){
+        width: 7rem;
     }
-
-    h2{
-        font-size: 2em;
-        margin: 0.5em 0;
     }
-
-    span{
-        font-size: 7em;
-        margin: 0.1em 0;
-    }
-
-    @media(max-width: 500px) {
-        h2 {
-            font-size: 1.5em;
-        }
-
-        span{
-            font-size: 5rem;
-        }
-    }
-
 `
 
-export const Info  = styled.div`
-    font-size: 0.9em;
-    padding: 1em;
-    margin: 1em 2em;
-    background-color: rgba(255, 255, 255, 0.1);
-    border-radius: 10px;
+export const Info = styled.div`
+    font-size: 0.85rem;
+    padding: 1rem;
+    border-radius: 25px;
+    background-color: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(6px);
+    border: 1px solid rgba(255, 255, 255, 0.08);
 
-    h3{
-        color: #fff;
+    h3 {
+        font-size: 0.9rem;
     }
 
-    div{
+    div {
         display: flex;
         justify-content: center;
-        margin-top: 1em;
-
-        span{
-            margin: 0 1em;
-        }
+        align-items: center;
+        gap: 10px;
     }
-
-    @media(max-width: 1000px) {
-        margin: 5em 0;
+    
+    p {
+        font-size: 0.8rem;
+        margin: 0.5rem 0;
     }
+`
 
-    @media(max-width: 320px) {
-        margin: 0 1em;
-        font-size: 0.7em;
-        margin: 3em 0;
-    }
+export const Hr = styled.div`
+    width: 20px;
+    height: 2px;
+    background-color: rgba(255, 255, 255, 0.35);
 `
 
 export const GoalsNumber = styled.div`
+    position: relative;
     display: flex;
-    flex-direction: column;
+    gap: 10px;
+    justify-content: center;
     align-items: center;
-`
 
-export const Button = styled.button`width: 50%;
-    padding: 1em;
-    border: none;
-    border-radius: 10px;
-    background-color: rgba(255, 255, 255, 0.1);
-    color: #fff;
-    text-transform: uppercase;
-    font-weight: bold;
-    font-size: 1em;
-    margin-top: 1em;
-    letter-spacing: 1px;
-    cursor: pointer;
-
-    &:hover {
-        background-color: rgba(255, 255, 255, 0.2);
-        transition: 0.6s;
+    span {
+        background: rgba(255, 255, 255, 0.05);
+        backdrop-filter: blur(6px);
+        border: 1px solid rgba(255, 255, 255, 0.07);
+        width: 40px;
+        height: 40px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 100%;
+        font-size: 1.2rem;
+        margin: 1rem 0;
     }
 
-    @media(max-width: 500px) {
-        width: auto;
+    
+`
+
+export const Button = styled.button`
+    background-color: rgba(255, 255, 255, 0.5);
+    border: none;
+    font-size: 0.9rem;
+    font-weight: bold;
+    padding: 5px 28px;
+    border-radius: 20px;
+    cursor: pointer;
+    scale: 0.9;
+
+    :hover {
+        background-color: rgba(255, 255, 255, 0.7);
+        scale: 1;
+        transition: 0.5s ease-in-out;
     }
 `
